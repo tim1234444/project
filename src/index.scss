@@ -159,7 +159,8 @@ color: #000;
     margin-right: 20px;
   }
   #message-container a {
-    color: #007bff;
+    color: #000;
+    display: flex;
     text-decoration: none;
     font-weight: bold;
   }
@@ -240,7 +241,7 @@ color: #000;
     }
     &-join__p{
         font-weight: 700;
-        @include fluid-text($min:18,$max:24 );
+        @include fluid-text($min:18,$max:22 );
         text-align: center;
         color: #000;
     }
@@ -269,7 +270,17 @@ color: #000;
     background: url(public/img/down.svg)
     center / 100% 100% no-repeat;
 }
+.next.swiper-button-disabled{
+    background: url(public/img/down_disabled.svg)
+    center / 100% 100% no-repeat;
+}
+.prev.swiper-button-disabled{
+    background: url(public/img/top_disabled.svg)
+    center / 100% 100% no-repeat;
+
+}
 .prev, .next{
+    cursor: pointer;
     width: 40px;
     height: 40px;
 }
@@ -279,8 +290,14 @@ color: #000;
     }
 }
 @media (max-width:700px){
+    #message-container.show {
+        transform: translateY(-270%);
+        right: 60px;
+      
+
+    }
     .swiper__navigation{
-        left:calc(var(--hero-right__width) - 5vw);
+        left:calc(var(--hero-right__width) + 15vw);
     }
     .swiper-join__container{
     bottom: clamp(100px, 34%, 300px)
@@ -345,7 +362,7 @@ color: #000;
 @media (max-width:460px){
     .swiper__navigation{
         left:calc(var(--hero-right__width) - 15vw);
-        top:30vh
+        top:28vh
     }
     .left__description{
         text-align: start;
