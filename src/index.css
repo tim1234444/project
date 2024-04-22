@@ -286,7 +286,7 @@
     left: calc(var(--hero-right__width) + 15vw);
   }
   .swiper-join__container {
-    bottom: clamp(100px, 34%, 300px);
+    bottom: clamp(100px, 35%, 300px);
   }
   .left__start {
     margin-left: 10px;
@@ -348,7 +348,7 @@
 }
 @media (max-width: 420px) {
   .swiper-join__container {
-    bottom: clamp(100px, 30%, 300px);
+    bottom: clamp(100px, 32%, 300px);
   }
 }
 * {
