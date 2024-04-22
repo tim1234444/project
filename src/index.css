@@ -329,16 +329,24 @@
     width: 100vw;
   }
 }
+@media (max-width: 520px) {
+  .swiper__navigation {
+    left: calc(var(--hero-right__width) - 2vw);
+    top: 28vh;
+  }
+}
+@media (max-width: 480px) {
+  .swiper__navigation {
+    left: calc(var(--hero-right__width) - 12vw);
+    top: 28vh;
+  }
+}
 @media (min-width: 460px) {
   .swiper-img {
     height: 100%;
   }
 }
 @media (max-width: 460px) {
-  .swiper__navigation {
-    left: calc(var(--hero-right__width) - 15vw);
-    top: 28vh;
-  }
   .left__description {
     text-align: start;
   }
