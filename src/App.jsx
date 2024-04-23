@@ -30,7 +30,7 @@ function App() {
     }});
     swiper.on('slideChange', function () {
         if(this.activeIndex === 2) {
-            showMessage();
+            setTimeout(showMessage, 500)
       // Закрытие сообщения через 3 секунды
       setTimeout(closeMessage, 3000);
         }
@@ -87,12 +87,15 @@ function App() {
                         <p>I’m staying in frankfurt am main from 15&nbsp;to&nbsp;apr&nbsp;21&nbsp;😍</p>
                         <p>Instagram subscribers only: send me a&nbsp;❤️️&nbsp;in&nbsp;my&nbsp;DMS </p>
                     </div>
-                    <a href="" className="link left__link">
-                        Subscrible&nbsp;my&nbsp;now&nbsp;Onlyfans
-                    </a>
-                    <div className="left__time">
-                        <span>70% OFF</span> ends in 0h 31m 43s
+                    <div className="left__link-and-time"> 
+                        <a href="" className="link left__link">
+                            Subscrible&nbsp;my&nbsp;now&nbsp;Onlyfans
+                        </a>
+                        <div className="left__time">
+                            <span>70% OFF</span> ends in&nbsp;0h&nbsp;31m&nbsp;43s
+                        </div>
                     </div>
+                    
                 </div>
             </div>
             <div className="hero__right" >

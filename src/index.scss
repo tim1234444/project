@@ -15,7 +15,7 @@
 .link{
     border-radius: 100px;
         background: #05b3fa;
-        padding: 20px 5%;
+        padding: 20px 15px;
         font-weight: 700;
         @include fluid-text($min:12,$max:18 );          
         text-transform: uppercase;
@@ -112,6 +112,13 @@
     &__link{
         
         margin-top: clamp(10px, 3vw ,80px);
+
+    }
+    &__link-and-time{
+        align-items: center;
+    display: flex;
+    flex-direction: column;
+        
     }
     &__time{
         margin-top: 20px;
@@ -221,7 +228,7 @@ color: #000;
         object-fit: cover;
         margin: 0 auto;
         display: block;
-        
+        height: 80%;
         width: clamp(390px, 32vw, 610px);
         z-index: 1;
     }
@@ -291,8 +298,8 @@ color: #000;
 }
 @media (max-width:700px){
     #message-container.show {
-        transform: translateY(-270%);
-        right: 60px;
+        transform: translateY(-280%);
+        right: 30px;
       
 
     }
@@ -323,6 +330,14 @@ color: #000;
     .left__time{
         margin-left: 10px;
 
+    }
+    .left__link-and-time{
+        text-align: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0px 20px;
+    width: 100%;
+   
     }
 
    
@@ -363,6 +378,15 @@ color: #000;
         top:28vh
     }
 }
+@media (max-width:460px){
+    .left__link-and-time{
+        justify-content: flex-start;
+    }
+    .left__description{
+        text-align: start;
+    }
+    
+}
 
 @media (min-width:460px){
     .swiper-img{
@@ -371,15 +395,7 @@ color: #000;
 }
 
 
-@media (max-width:460px){
-    
-    .left__description{
-        text-align: start;
-    }
-    .left__time{
-        max-width: 100px;
-    }
-}
+
 @media (max-width:420px) {
     .swiper-join__container{
 bottom: clamp(100px, 32%, 300px)
